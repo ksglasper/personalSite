@@ -1,9 +1,31 @@
-
-
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import {Header, Home, CssTest} from './'
 
 const App = () =>{
+
+
     return (
-        <h1>Hello World!</h1>
+        
+        <>
+        <Routes>
+            <Route exact path="/" element={<Header/>} >
+                <Route index element={<Home/>}/>
+
+                <Route path="/test" element={<CssTest/>}/>
+
+
+
+
+
+
+
+            </Route>
+
+
+
+        </Routes>
+        </>
     )
 }
 
