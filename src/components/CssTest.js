@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Stack from "react-bootstrap/Stack";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Button from "react-bootstrap/Button";
@@ -7,6 +7,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Modal from "react-bootstrap/Modal";
 import Formtest from "./Formtest";
 import Form from "react-bootstrap/Form";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
 const CssTest = () => {
   const [show, setShow] = useState(false);
@@ -16,7 +19,7 @@ const CssTest = () => {
   function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 2000));
   }
-
+// Loading Button functionality!@!!!!!
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -49,8 +52,8 @@ const CssTest = () => {
 
 
 
-
-
+{/* Breadcrumb has a built in navigation of the url trail you are currently in!~ 
+         */}
 
         <Breadcrumb>
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
@@ -59,6 +62,8 @@ const CssTest = () => {
           </Breadcrumb.Item>
           <Breadcrumb.Item active>Data</Breadcrumb.Item>
         </Breadcrumb>
+
+
         <Button variant="primary" size="lg" disabled>
           Primary button
         </Button>{" "}
@@ -68,6 +73,9 @@ const CssTest = () => {
         <Button href="#" variant="secondary" size="lg" disabled>
           Link
         </Button>{" "}
+
+        {/* The button set up for the loading
+        */}
         <Button
           variant="primary"
           disabled={isLoading}
@@ -116,6 +124,7 @@ const CssTest = () => {
             className="d-block w-100 moviePoster"
             src="https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_SX300.jpg"
             alt="Third slide"
+            
           />
 
           <Carousel.Caption>
@@ -130,11 +139,13 @@ const CssTest = () => {
         Launch static backdrop modal
       </Button>
 
+{/* THE MODAL SET IS HERE!##
+*/}
       <Modal
         centered
         show={show}
         onHide={handleClose}
-        //Static forces user to click the close button to dismiss modal
+//Static forces user to click the close button to dismiss modal
         backdrop="static"
         keyboard={false}
       >
@@ -142,6 +153,8 @@ const CssTest = () => {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+  {/* The form within the modal body
+            */}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -175,6 +188,23 @@ const CssTest = () => {
           <Button variant="primary">Understood</Button>
         </Modal.Footer> */}
       </Modal>
+
+      {/*
+      NavBar example!!!
+      */}
+      <Navbar bg="danger" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="#home">Home</Nav.Link>
+            <Nav.Link as={Link} to="#features">Features</Nav.Link>
+            <Nav.Link as={Link} to="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+
+
     </>
   );
 };

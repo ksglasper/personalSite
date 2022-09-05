@@ -1,0 +1,70 @@
+
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #0d6efd;
+$danger: #dc3545;
+$secondary:  #6c757d;
+$success:    #198754;
+$info:       #0dcaf0;
+$warning:    #ffc107;
+$light:      #f8f9fa;
+$dark:       #212529;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "light":      $light,
+  "dark":       $dark
+);
+// Create your own map
+$custom-colors: (
+  "phlox": #CA3CFF,
+  "xiketic": #1E1014,
+  "powder-blue": #C9E4E7,
+  "tea-green": #CAFFD0,
+ 
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../public/style.css";
+
+
+body {
+  margin: 0;
+  background-color: #c9e4e7;
+}
+Stack{
+  background-color: #c9e4e7;
+
+}
+
+
+#header{
+    display: flex;
+}
+
+.moviePoster{
+    width:400px;
+    height:500px;
+    margin: auto;
+}
+
+.carousel {
+    width:800px;
+    height:500px;
+    margin: auto;
+  }
+
+.testbox{
+display: flex;
+}

@@ -1,6 +1,7 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
-import {Header, Home, CssTest} from './'
+import {Header, Home, CssTest, CssTestTwo} from './'
+import '../style.scss'
 
 const App = () =>{
 
@@ -12,7 +13,9 @@ const App = () =>{
             <Route exact path="/" element={<Header/>} >
                 <Route index element={<Home/>}/>
 
-                <Route path="/test" element={<CssTest/>}/>
+                <Route path="/bootstraptest" element={<CssTest/>}/>
+                <Route path="/materialuitest" element={<CssTestTwo/>}/>
+
 
 
 
