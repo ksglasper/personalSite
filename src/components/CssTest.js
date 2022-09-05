@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 import Stack from "react-bootstrap/Stack";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Button from "react-bootstrap/Button";
@@ -10,6 +10,7 @@ import Form from "react-bootstrap/Form";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+
 
 const CssTest = () => {
   const [show, setShow] = useState(false);
@@ -175,7 +176,7 @@ const CssTest = () => {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit" >
+            <Button variant="tea-green" type="submit" >
               Submit
             </Button>
           </Form>
@@ -192,7 +193,7 @@ const CssTest = () => {
       {/*
       NavBar example!!!
       */}
-      <Navbar bg="danger" variant="dark">
+      {/* <Navbar bg="danger" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -201,8 +202,20 @@ const CssTest = () => {
             <Nav.Link as={Link} to="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
-      </Navbar>
-
+      </Navbar> */}
+    <Nav variant="tabs" >
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/bootstraptest">BootStrap</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/materialuitest" eventKey="link-1" >MaterialUI</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to='/' eventKey="link-2" >
+          Home
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
 
 
     </>
