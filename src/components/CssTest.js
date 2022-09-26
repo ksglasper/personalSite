@@ -10,6 +10,7 @@ import Form from "react-bootstrap/Form";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import BlockText from "./BlockText";
 
 
 const CssTest = () => {
@@ -216,7 +217,7 @@ const CssTest = () => {
         </Nav.Link>
       </Nav.Item>
     </Nav>
-
+      <BlockText/>
 
     </>
   );

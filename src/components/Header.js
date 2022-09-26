@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet, Link } from "react-router-dom";
+import { NavLink, Outlet, Link, useParams } from "react-router-dom";
 import Stack from "react-bootstrap/Stack";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Nav from 'react-bootstrap/Nav';
@@ -8,17 +8,19 @@ import Container from 'react-bootstrap/Container';
 
 
 const Header = () => {
+  let {resume} = useParams()
   return (
     <>
       <header id="header">
       
-    <Navbar bg="danger" variant="dark">
+    <Navbar fixed="top"  bg="test2" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#top"><img id="nav-logo" src="./images/nav-logo.png"/></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="#home">Home</Nav.Link>
-            <Nav.Link as={Link} to="#features">Features</Nav.Link>
-            <Nav.Link as={Link} to="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#top"><span>Home</span></Nav.Link>
+            <Nav.Link href="#projects"><span>Projects</span></Nav.Link>
+            <Nav.Link href="#about-me"><span>About Me</span></Nav.Link>
+            <Nav.Link href="./assets/Resume_WebDev_KyleGlasper.pdf" target="_blank"><span>Resume</span></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
