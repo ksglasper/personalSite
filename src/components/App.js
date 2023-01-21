@@ -12,8 +12,8 @@ const App = () =>{
         <Routes>
             <Route exact path="/" element={<Header/>} >
                 <Route index element={<Home/>}/>
-                {/* <Route path="/bootstraptest" element={<CssTest/>}/>
-                <Route path="/materialuitest" element={<CssTestTwo/>}/> */}
+                <Route path="/bootstraptest" element={<CssTest/>}/>
+                <Route path="/materialuitest" element={<CssTestTwo/>}/>
             </Route>
             {/* <Route exact path="/resume" element={<ResumeHeader/>} >
                 <Route index element={<Resume/>}/>

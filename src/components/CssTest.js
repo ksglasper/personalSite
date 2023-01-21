@@ -183,18 +183,18 @@ const CssTest = () => {
           </Form>
           {/* <Form/> */}
         </Modal.Body>
-        {/* <Modal.Footer>
+        <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary">Understood</Button>
-        </Modal.Footer> */}
+        </Modal.Footer>
       </Modal>
 
       {/*
       NavBar example!!!
       */}
-      {/* <Navbar bg="danger" variant="dark">
+      <Navbar bg="danger" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -203,7 +203,7 @@ const CssTest = () => {
             <Nav.Link as={Link} to="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
-      </Navbar> */}
+      </Navbar>
     <Nav variant="tabs" >
       <Nav.Item>
         <Nav.Link as={NavLink} to="/bootstraptest">BootStrap</Nav.Link>
