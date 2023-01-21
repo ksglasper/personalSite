@@ -18,7 +18,7 @@ const Header = () => {
             <Nav.Link href="#top"><span>Home</span></Nav.Link>
             <Nav.Link href="#projects"><span>Projects</span></Nav.Link>
             <Nav.Link href="#about-me"><span>About Me</span></Nav.Link>
-            <Nav.Link href="./assets/Resume_WebDev_KyleGlasper.pdf" target="_blank"><span>Resume</span></Nav.Link>
+            <Nav.Link href="./assets/Kyle_Glasper_Resume.pdf" target="_blank"><span>Resume</span></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
