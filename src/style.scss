@@ -153,7 +153,7 @@ p{
 }
 #back{
   text-decoration: none;
-  color: white;
+  color: black;
   text-shadow: 2px 2px 4px #000000;
 }
 #back:hover{
@@ -200,6 +200,13 @@ p{
   flex-direction: column;
   margin-bottom: 0px;
 
+}
+
+
+
+#dropdown-basic{
+  color: #000000;
+  display: none;
 }
 
 
@@ -462,6 +469,16 @@ span{
     flex-direction: column;
   
   }
+  .me-auto{
+    display: none;
+  }
+
+  #dropdown-basic{
+    display: initial;
+
+  }
+ 
+
 }
 
 
@@ -494,4 +511,19 @@ span{
     flex-direction: column;
   
   }
+  .me-auto{
+    display: none;
+  }
+
+  #dropdown-basic{
+    display: initial;
+  }
+  
 }
+
+.me-auto{
+  // width: 60rem;
+  width: 100%;
+
+}
+
