@@ -7,7 +7,6 @@
     "start": "react-scripts start",
     "start-dev": "NODE_ENV='development' react-scripts start",
     "build": "react-scripts build"
-
   },
   "keywords": [],
   "author": "Kyle Glasper",
