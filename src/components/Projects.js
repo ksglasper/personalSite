@@ -27,6 +27,7 @@ const Projects = () => {
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
   const [show5, setShow5] = useState(false);
+  const [show6, setShow6] = useState(false);
 
   const handleClose3 = () => {
     setShow3(false);
@@ -46,9 +47,108 @@ const Projects = () => {
   const handleClose5 = () => {
     setShow5(false);
   };
+  const handleShow6 = () => {
+    setShow6(true);
+  };
+  const handleClose6 = () => {
+    setShow6(false);
+  };
   return (
     <>
       <CardGroup className="project-cards">
+        <Card border="dark" bg="dark" className="single-card">
+          <Nav.Link href="https://ffflexsquad.com">
+            <Card.Img
+              className="site-thumbnail"
+              variant="top"
+              src="./images/fantasyFootballThumbnail.PNG"
+            />
+          </Nav.Link>
+
+          <Card.Body>
+            <Card.Title className="card-title">
+              Fantasy Football Flex Squad
+            </Card.Title>
+            <Card.Text>
+              A fantasy football site I made for my league to view our history,
+              individual team pages, season stats, and head to head matchups.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted card-title">
+              <Button variant="test2" onClick={handleShow6}>
+                More details
+              </Button>
+              <Modal
+                show={show6}
+                onHide={handleClose6}
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+              >
+                <Modal.Header closeButton>
+                  <Modal.Title>Fantasy Football Flex Squad</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="project-modal">
+                  Coming Soon!
+                  {/* This project was completed by myself and 3 other classmates.
+                  The purpose was to create a complete fullstack application
+                  with plenty of functionality for both users and admin. The app
+                  allows users to remain a guest or register/login while
+                  browsing movies to buy. With 251 movie titles to choose from,
+                  users can sort through the catalog either directly using the
+                  search bar or sort by different categories including price,
+                  popularity, and title.
+                  <br />
+                  <br />
+                  The way we accessed so many titles was through another API
+                  (omdbapi) where we pulled a list of the top 250 movies,
+                  queried that database, selected the pertinent information for
+                  this project, and placed it into our own database. Users can
+                  also leave reviews for movies and check their order history
+                  once a purchase is made.
+                  <br />
+                  <br />
+                  My specific contributions include handling the outside API,
+                  displaying the movies, setting up the search bar and filter
+                  methods, navigation between pages of displayed movies, and
+                  creating the individual movie page to see full details. I was
+                  also responsible for allowing admin to edit or delete movie
+                  titles. */}
+                  <div className="icon-div">
+                    <small className="tech-used">
+                      Technologies used: PERN stack, Recharts, Vercel, React
+                      Bootstrap, JSON{" "}
+                    </small>
+                    <Nav.Link href="https://github.com/ksglasper/nfl-fantasy-league-mover">
+                      <img
+                        className="modal-icon"
+                        src="./images/github-icon.png"
+                      ></img>
+                    </Nav.Link>
+                    <Nav.Link href="https://ffflexsquad.com">
+                      <img
+                        className="modal-icon"
+                        src="./images/redirect.png"
+                      ></img>
+                    </Nav.Link>
+                    {/* <Nav.Link href="https://www.youtube.com/watch?v=6cbjSG0tonU&list=PLVDIcDXQ2bNZZUw8mOHPaXIXRQbyVRdsn">
+                      <img
+                        className="modal-icon"
+                        src="./images/youtube.png"
+                      ></img>
+                    </Nav.Link> */}
+                  </div>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="dark" onClick={handleClose1}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+            </small>
+          </Card.Footer>
+        </Card>
         <Card border="dark" bg="dark" className="single-card">
           <Nav.Link href="https://weather-app-9f47.vercel.app/">
             <Card.Img
@@ -61,7 +161,10 @@ const Projects = () => {
           <Card.Body>
             <Card.Title className="card-title">Weather With You</Card.Title>
             <Card.Text>
-              A weather app that users can search and favorite their favorite cities that show up on their profile. This project includes in-depth weather information at hourly, daily, and weekly intervals with easy to read charts and graphs. 
+              A weather app that users can search and favorite their favorite
+              cities that show up on their profile. This project includes
+              in-depth weather information at hourly, daily, and weekly
+              intervals with easy to read charts and graphs.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -107,7 +210,8 @@ const Projects = () => {
                   titles. */}
                   <div className="icon-div">
                     <small className="tech-used">
-                      Technologies used: PERN stack, Recharts, Vercel, React Bootstrap, JSON{" "}
+                      Technologies used: PERN stack, Recharts, Vercel, React
+                      Bootstrap, JSON{" "}
                     </small>
                     <Nav.Link href="https://github.com/Fullstack-PostGrad-Projects/weather-app">
                       <img
@@ -228,6 +332,8 @@ const Projects = () => {
             </small>
           </Card.Footer>
         </Card>
+      </CardGroup>
+      <CardGroup className="project-cards">
         <Card border="dark" bg="dark" className="single-card">
           <Nav.Link href="https://github.com/ksglasper/playwrightPractice">
             <Card.Img
@@ -238,9 +344,13 @@ const Projects = () => {
           </Nav.Link>
 
           <Card.Body>
-            <Card.Title className="card-title">Netflix Playwright Unit Testing</Card.Title>
+            <Card.Title className="card-title">
+              Netflix Playwright Unit Testing
+            </Card.Title>
             <Card.Text>
-              An examination opf using playwright unit testing. The project features extensive testing for Netflix's login form including: navigation, error handling, edge cases, and customizable inputs.
+              An examination opf using playwright unit testing. The project
+              features extensive testing for Netflix's login form including:
+              navigation, error handling, edge cases, and customizable inputs.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -316,8 +426,6 @@ const Projects = () => {
             </small>
           </Card.Footer>
         </Card>
-      </CardGroup>
-      <CardGroup className="project-cards">
         <Card border="dark" bg="dark" className="single-card">
           <Nav.Link href="https://jazzy-arithmetic-3865c1.netlify.app/">
             <Card.Img
